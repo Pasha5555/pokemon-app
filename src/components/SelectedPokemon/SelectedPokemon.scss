@@ -1,0 +1,13 @@
+.selected-pokemon {
+  display: flex;
+  justify-content: center;
+  background-color: blue;
+  width: 30%;
+  padding-top: 200px;
+
+  &__container {
+    width: 300px;
+    height: 400px;
+    border: 2px solid black;
+  }
+}
