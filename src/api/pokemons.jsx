@@ -1,4 +1,4 @@
-const BASE_URL = 'http://pokeapi.co/api/v2/pokemon';
+const BASE_URL = 'https://pokeapi.co/api/v2/pokemon';
 
 export const getPokemons = (count) => {
   return fetch(`${BASE_URL}?limit=${count}`).then(res => res.json())
