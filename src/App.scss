@@ -1,0 +1,57 @@
+@import './components/CommonStyles/mixins.scss';
+
+* {
+  box-sizing: border-box;
+}
+
+body, p {
+  margin: 0;
+}
+
+.app {
+  display: block;
+  padding: 30px 0;
+
+  &__select {
+    display: block;
+    padding: 5px 10px;
+    margin: auto;
+    border: 2px solid rgb(40, 90, 255);
+  }
+
+  &__button-load {
+    display: block;
+    width: 400px;
+    height: 50px;
+    font-family: 'Inter', sans-serif;
+    background-color: rgb(40, 90, 255);
+    margin: 30px auto;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 700;
+    border-radius: 10px;
+    outline: none;
+    cursor: pointer;
+    background-image: linear-gradient(45deg, rgb(33, 39, 109) 50%, transparent 50%);
+    background-position: 100%;
+    background-size: 400%;
+    transition: background-position 0.5s ease-in-out;
+  
+    &:hover {
+      background-position: 0;
+      color: #fff;
+    }
+  }
+
+  &__button-scroll-top {
+    @include scrollButton(75px);
+  }
+
+  &__button-scroll-bottom {
+    @include scrollButton(20px);
+  }
+}
+
+.main {
+  display: flex;
+}

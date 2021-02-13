@@ -1,0 +1,134 @@
+@import '../CommonStyles/mixins.scss';
+
+.pokemons {
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 1200px;
+    margin: 50px auto 0 auto;
+    list-style-type: none;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 250px;
+    height: 320px;
+    margin: 10px;
+    border: 2px solid rgb(124, 120, 120);
+    cursor: pointer;
+    transition: transform 0.5s;
+
+    &:hover {
+      box-shadow: 1px 1px 3px 3px rgba(211, 203, 203, 0.5);
+      transform: scale(1.1)
+    }
+  }
+}
+
+.item {
+  &__img {
+    margin: 20px;
+    width: 160px;
+    height: 160px;
+  }
+
+  &__name {
+    margin-top: 10px;
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+  }
+
+  &__number {
+    font-family: 'Inter', sans-serif;
+  }
+
+  &__types {
+    display: flex;
+    justify-content: space-between;
+    width: 200px;
+    margin-top: 10px;
+    font-family: 'Inter', sans-serif;
+  }
+
+  &__type {
+    display: block;
+    padding: 7px 15px;
+    border-radius: 10px;
+
+    &--grass {
+      @include typeColor(#7da567, #96c47f, #a5cf8f, #c4e0b5)
+    }
+    
+    &--poison {
+      @include typeColor(#a078b3, #b293c0, #cfb5dd, #e4cfee)
+    }
+    
+    &--fire {
+      @include typeColor(#ec7672, #e0827d, #eeb1ae, #f7d1cf)
+    }
+    
+    &--electric {
+      @include typeColor(#f3d26e, #f1d98e, #f8e4a9, #faecc2)
+    }
+    
+    &--fighting {
+      @include typeColor(#f07b0f, #e08d48, #ce995c, #d4a980);
+    }
+    
+    &--ground {
+      @include typeColor(#97673a, #97704c, #b49478, #d3ac88);
+    }
+    
+    &--rock {
+      @include typeColor(#423c42, #665b66, #836a83, #b68bb6)
+    }
+    
+    &--bug {
+      @include typeColor(#a4a74d, #b3b660, #d1d47c, #f3f78f)
+    }
+    
+    &--water {
+      @include typeColor(#5c86b9, #7799c2, #95b5dd, #b6d0f0)
+    }
+    
+    &--dark {
+      @include typeColor(#1a1717, #302f30, #4e4d4e, #6e6d6f)
+    }
+    
+    &--psychic {
+      @include typeColor(#979c52, #afb45f, #dde290, #dfe4a4)
+    }
+    
+    &--fairy {
+      @include typeColor(#de37c2, #e05cca, #d67fc8, #f3c1eb)
+    }
+    
+    &--flying {
+      @include typeColor(#58a7cc, #81c6e9, #95cfec, #b3d8eb)
+    }
+    
+    &--normal {
+      @include typeColor(#5e5c5c, #7c7474, #a7a3a3, #c7c4c4)
+    }
+    
+    &--ghost {
+      @include typeColor(#a5a59c, #c7c7bf, #dbdbd3, #f0f0e7)
+    }
+    
+    &--dragon {
+      @include typeColor(#801212, #b32424, #d64848, #e46f6f)
+    }
+    
+    &--ice {
+      @include typeColor(#3b8baa, #629bb1, #6ab1ce, #3dc8ff)
+    }
+    
+    &--steel {
+      @include typeColor(#67719e, #767c96, #9da1b6, #7886c4)
+    }
+  }
+}
