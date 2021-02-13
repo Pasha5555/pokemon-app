@@ -9,5 +9,5 @@ export const getPokemon = async url => (
 );
 
 export const getTypes = () => (
-  fetch('http://pokeapi.co/api/v2/type/').then(res => res.json())
+  fetch('https://pokeapi.co/api/v2/type/').then(res => res.json())
 );

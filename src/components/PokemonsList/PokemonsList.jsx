@@ -20,7 +20,8 @@ export const PokemonsList = ({
 
   if (filterValue && resultPokemons.length === pokemonsCount) {
     resultPokemons = resultPokemons
-      .filter(pok => pok.types[0].type.name === filterValue);
+      .filter(pokemon => pokemon.types[0].type.name === filterValue
+        || (pokemon.types[1] && pokemon.types[1].type.name === filterValue));
   }
 
   return (
