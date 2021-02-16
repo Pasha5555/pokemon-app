@@ -6,7 +6,7 @@ import classNames from 'classnames';
 import './PokemonsList.scss';
 
 export const PokemonsList = ({
-  onAddPokemon,
+  showPokemonInfo,
   pokemonsCount,
   pokemonsAllInfo,
   filterValue,
@@ -30,11 +30,10 @@ export const PokemonsList = ({
         resultPokemons && resultPokemons.map(pokemon => (
           <li
             key={pokemon.name}
-            onClick={() => onAddPokemon(pokemon.url)}
+            onClick={() => showPokemonInfo(pokemon.url)}
             className="pokemons__item item"
           >
             <img
-              width="100px"
               src={pokemon.imgUrl}
               className="item__img"
               alt="Pokemon"
@@ -64,7 +63,7 @@ export const PokemonsList = ({
 };
 
 PokemonsList.propTypes = {
-  onAddPokemon: PropTypes.func.isRequired,
+  showPokemonInfo: PropTypes.func.isRequired,
   pokemonsCount: PropTypes.number.isRequired,
   pokemonsAllInfo: PropTypes.arrayOf(PropTypes.shape({
     name: PropTypes.string.isRequired,

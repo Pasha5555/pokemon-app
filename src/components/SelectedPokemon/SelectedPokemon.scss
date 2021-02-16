@@ -1,7 +1,7 @@
 .selected-pokemon {
   display: flex;
   justify-content: center;
-  width: 700px;
+  grid-column: 9 / span 4;
   padding-top: 150px;
   margin-right: 80px;
 

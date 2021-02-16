@@ -73,7 +73,7 @@ function App() {
       </select>
       <main className="main">
         <PokemonsList
-          onAddPokemon={fetchPokemon}
+          showPokemonInfo={fetchPokemon}
           pokemonsAllInfo={pokemonsAllInfo}
           pokemonsCount={pokemonsCount}
           filterValue={filterValue}
